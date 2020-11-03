@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+$containerWidth: 1140px;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'lato', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    width: $containerWidth;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100px;
+    border-bottom: 1px solid #ececec;
+    .container {
+        height: inherit;
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        width: 167px;
+        height: 51px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding-left: 72px;
+        background: url(../images/logo.png) no-repeat;
+        text-decoration: none;
+        font-size: 27px;
+        line-height: 32px;
+        font-weight: 300;
+        letter-spacing: 0.025em;
+        color: #222222;
+        span {
+            font-weight: 900;
+            color: #f16d7f;
+        }
+    }
+    .headerSearchForm {
+        margin-left: 37px;
+        display: flex;
+        height: 38px;
+        .headerBrowse {
+            width: 87px;
+            text-decoration: none;
+            background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%);
+            border: 1px solid #e6e6e6;
+            font-size: 14px;
+            line-height: 32px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            color: #222222;
+            border-radius: 3px 0px 0px 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                margin-left: 8px;
+            }
+        }
+        input {
+            width: 317px;
+            background-color: #ffffff;
+            border: none;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+            box-sizing: border-box;
+            padding: 12px 15px;
+            font-size: 14px;
+            line-height: 32px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            color: #a4a4a4;
+            outline: none;
+        }
+        button {
+            width: 36px;
+            background-color: #ffffff;
+            border: 1px solid #e6e6e6;
+            border-radius: 0px 3px 3px 0px;
+            font-size: 14px;
+            line-height: 32px;
+            color: #a4a4a4;
+        }
+    }
+    .headerCart {
+        margin-left: auto;
+    }
+    .accountBtn {
+        margin-left: 26px;
+        width: 130px;
+        height: 38px;
+        background-color: #f16d7f;
+        border: none;
+        font-size: 15px;
+        line-height: 32px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+        i {
+            margin-left: 8px;
+        }
+    }
+}
+
+.topNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    a {  
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+    }
+    a:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+.promo {
+    height: 614px;
+    background-color: #e8e8e8;
+    .container {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        //box-shadow: 0 0 10px inset gray;
+        background: url(../images/topHeaderBack.png) no-repeat;
+        background-position: right 40px top 5px;
+        background-size: 550px;
+    }
+    .promoTagline {
+        border-left: 12px solid #f16d7f;
+        color: #222222;
+        height: 92px;
+        padding-left: 12px;
+        .firstText {
+            font-size: 60px;
+            line-height: 42px;
+            font-weight: 900;
+            letter-spacing: 0.025em;
+        }
+        .secondText {
+            font-size: 40px;
+            line-height: 32px;
+            font-weight: 900;
+            letter-spacing: 0.025em;
+            margin-top: 18px;
+            span {
+                font-size: 40px;
+                color: #f16d7f;
+            }
+        }
+    }
+}
+
+.offers {
+    margin-top: 98px;
+    .container{
+        position: relative;
+    }
+    .textOffer {
+        background-color: #ffffff;
+        padding: 16px 20px;
+        display: inline-block;
+        margin-top: 26px;
+        max-width: 50%;
+        font-weight: 900;
+        .topTextOffer {
+            font-size: 18px;
+            line-height: 1.2;
+            letter-spacing: 0.025em;
+            color: #222222;
+         }
+        .bottomTextOffer {
+            font-size: 30px;
+            color: #f16d7f;
+        }
+    }
+    .firstOffer {
+        width: 560px;
+        height: 542px;
+        background: url(../images/offer1.jpg) no-repeat;
+    }
+    .secondOffer {
+        width: 560px;
+        height: 261px;
+        background: url(../images/offer2.jpg) no-repeat;
+        margin-top: 20px;
+    }
+    .thirdOffer {
+        width: 560px;
+        height: 261px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url(../images/offer3.jpg) no-repeat;
+    }
+    .fourthOffer {
+        width: 560px;
+        height: 542px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: url(../images/offer4.jpg) no-repeat;
+    }
+}
+
+.cards {
+    margin-top: 100px;
+    .headingCard {
+        text-align: center;
+        .topHeadingCard {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 54px;
+            letter-spacing: 0.025em;
+        }
+        .bottomHeadingCard {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.025em;
+            color: #9f9f9f;
+        }
+    }
+    .cardBox{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .card {
+            height: 364px;
+            margin-top: 60px;
+            .selectCard {
+                height: 280px;
+                width: 261px;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                position: absolute;
+                button {
+                    padding: 15px;
+                    border: 1px solid #ffffff;
+                    background: none;
+                    color: white;
+                    font-size: 13px;
+                    font-weight: 700;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+            .imgCard {
+                width: 261px;
+                height: 280px;
+            }
+            .textCard {
+                margin-left: 15px;
+                margin-top: 19px;
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: 400;
+            }
+            .costCard {
+                margin-left: 15px;
+                margin-top: 17px;
+                font-size: 16px;
+                line-height: 1.2;
+                font-weight: 700;
+                color: #f16d7f;
+            }
+        }
+        .card:hover {
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+            .selectCard {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    button {
+        padding: 18px 24px;
+        background: #f16d7f;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        margin: 60px auto 110px;
+    }
+}
+
+.sales {
+    .container {
+        position: relative;
+        height: 529px;
+        background: url(../images/women.jpg) no-repeat;
+    }
+    .salesForWoman {
+        position: absolute;
+        top: 146px;
+        left: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        .topTextSales {
+            font-size: 53.7px;
+            letter-spacing: 0.025em;
+            color: #ffffff;
+            span {
+                color: #f16d7f;
+            }
+        }
+        .bottomTextSales {
+            font-size: 32.2px;
+            letter-spacing: 0.025em;
+            color: #ffffff;
+        }
+    }
+    .salesDetails {
+        position: absolute;
+        height: 529px;
+        width: $containerWidth - 767px;
+        display: flex;
+        flex-direction: column;
+        background-color: #222224;
+        color: #fbfbfb;
+        right: 0;
+        .details {
+            padding: 30px 30px 30px 110px;
+            margin-top: 25px;
+            color: #fbfbfb;
+            letter-spacing: 0.025em;
+        }
+        .details:first-child {
+             background: url(../images/details1.png) no-repeat 36px 30px;
+        }
+        .details:nth-child(2) {
+             background: url(../images/details2.png) no-repeat 36px 30px;
+        }
+        .details:last-child {
+             background: url(../images/details3.png) no-repeat 36px 30px;
+        }
+        .headingDetails {
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        .textDetails {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+        }
+    }
+}
