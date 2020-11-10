@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 $containerWidth: 1140px;
+$imgSinglePage: 777px;
 
 body {
     margin: 0;
@@ -113,18 +114,23 @@ body {
 .topNav {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 51px;
     a {  
+        display: flex;
+        align-items: center;
         text-decoration: none;
         font-size: 14px;
-        line-height: 26px;
         font-weight: 700;
         text-transform: uppercase;
         color: #222222;
+        border-bottom: 3px solid transparent;
+        box-sizing: border-box;
     }
     a:not(:last-child) {
         margin-right: 40px;
+    }
+    a:hover {
+        border-color: #f16d7f;
     }
 }
 
@@ -235,9 +241,6 @@ body {
         }
     }
     .cardBox{
-        /*display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;*/
         .card {
             height: 364px;
             margin-top: 60px; 
@@ -538,6 +541,7 @@ body {
                 color: #4a4a4a;
                 font-weight: 700;
                 font-size: 11px;
+                cursor: pointer;
             }
         }
         .couponDiscount {
@@ -576,6 +580,7 @@ body {
                 color: #4a4a4a;
                 font-weight: 700;
                 font-size: 11px;
+                cursor: pointer;
             }
         }
         .grandTotal {
@@ -599,6 +604,7 @@ body {
                 font-size: 16px;
                 font-weight: 700;
                 border: none;
+                cursor: pointer;
             }
         }
         .grandTotalGrand {
@@ -611,6 +617,253 @@ body {
             border-bottom: 1px solid #e2e2e2;
             margin-bottom: 17px;
         }
+    }
+}
+
+.imgSinglePage {
+    position: relative;
+    img {
+        min-height: 777px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    .angle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: calc(50% - 47px / 2);
+        width: 47px;
+        height: 47px;
+        color: #fff;
+        background: #d8d8d8;
+        cursor: pointer;
+    }
+    .right {
+        right: 0;
+    }
+}
+
+.womenCollection {
+    height: 730px;
+    position: relative;
+    top: -86px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    .containerWomen {
+        width: 620px;
+        margin: 0 auto;
+        h3 {
+            text-align: center;
+            padding-top: 70px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #f16d7f;
+        }
+        .womenSwitch {
+            padding-left: calc(50% - 74px);
+            display: flex;
+            justify-content: center;
+            width: 148px;
+            margin-top: 10px;
+            div {
+                width: 44px;
+                height: 1px;
+                background-color: #d6d6d6;
+                }
+            .center {
+                width: 60px;
+                height: 3px;
+                background-color: #d6d6d6;
+                cursor: pointer;
+            }
+            .center:hover {
+                background-color: #f16d7f;
+            }
+        }
+        h2 {
+            padding-top: 16px;
+            margin: 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 900;
+            color: #4d4d4d;
+        }
+        .textWomenCollection {
+            text-align: center;
+            margin-top: 38px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #5e5e5e;
+        }
+        .materialDesigner {
+            display: flex;
+            justify-content: space-evenly;
+            p {
+                font-size: 14px;
+                font-weight: 700;
+                color: #b9b9b9;
+                span {
+                    color: #2f2f2f;
+                }
+            }
+        }
+        .price {
+            margin-top: 36px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #ef5b70;
+            padding-bottom: 43px;
+            margin-bottom: 63px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 537px;
+            margin-left: auto;
+            margin-right: auto;
+            .boxChoose {
+                label {
+                    color: #2f2f2f;
+                    font-weight: 700;
+                    margin-bottom: 16px;
+                    display: block;
+                }
+                select,
+                input {
+                    width: 144px;
+                    height: 35px;
+                    display: block;
+                    border: 1px solid #eaeaea;
+                    padding: 8px 10px;
+                    font-size: 13px;
+                    color: #bcbcbc;
+                    outline: none;
+                    }
+                .selectWrap {
+                    position: relative;
+                    i {
+                        color: #bcbcbc;
+                        position: absolute;
+                        right: 8px;
+                        top: 12px;
+                        display: block;
+                        font-size: 12px;
+                    }
+                    .color {
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        background: #f16d7f;
+                        top: 11px;
+                        left: 14px;
+                        }
+                    .selectColor {
+                        padding-left: 37px;
+                    }
+                }
+                input {
+                    box-sizing: border-box;
+                }
+            }
+            button {
+                width: 100%;
+                border: 1px solid #f16d7f;
+                background: #ffffff;
+                margin-top: 28px;
+                padding: 15px;
+                color: #f16d7f;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                img {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.mayAlso {
+    margin-top: 30px;
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 900;
+        color: #4d4d4d;
+    }
+    .cardBox{
+        .card {
+            height: 364px;
+            margin-top: 60px; 
+            float: left;
+            .selectCard {
+                height: 280px;
+                width: 261px;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                position: absolute;
+                button {
+                    padding: 15px;
+                    border: 1px solid #ffffff;
+                    background: none;
+                    color: white;
+                    font-size: 13px;
+                    font-weight: 700;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+            .imgCard {
+                width: 261px;
+                height: 280px;
+                background: #e9e9e9;
+            }
+            .signatureCard {
+                margin: 15px;
+                .textCard {
+                    font-size: 13px;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #6f6e6e;
+                }
+                .costCard {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    line-height: 1.2;
+                    font-weight: 700;
+                    color: #f16d7f;
+                }
+            }
+        }
+        .card:nth-child(n+5) {
+            margin-top: 39px;
+        }
+        .card:not(:nth-child(4n)) {
+            margin-right: 30px;
+        }
+        .card:hover {
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+            .selectCard {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .cardBox:after {
+        content: '';
+        display: block;
+        clear: both;
     }
 }
 

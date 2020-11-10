@@ -143,23 +143,32 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 51px;
 }
 
 .topNav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   font-size: 14px;
-  line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
   color: #222222;
+  border-bottom: 3px solid transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .topNav a:not(:last-child) {
   margin-right: 40px;
+}
+
+.topNav a:hover {
+  border-color: #f16d7f;
 }
 
 .promo {
@@ -287,12 +296,6 @@ body {
   font-weight: 400;
   letter-spacing: 0.025em;
   color: #9f9f9f;
-}
-
-.cards .cardBox {
-  /*display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;*/
 }
 
 .cards .cardBox .card {
@@ -697,6 +700,7 @@ body {
   color: #4a4a4a;
   font-weight: 700;
   font-size: 11px;
+  cursor: pointer;
 }
 
 .shoppingForm .container .couponDiscount {
@@ -741,6 +745,7 @@ body {
   color: #4a4a4a;
   font-weight: 700;
   font-size: 11px;
+  cursor: pointer;
 }
 
 .shoppingForm .container .grandTotal {
@@ -768,6 +773,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   border: none;
+  cursor: pointer;
 }
 
 .shoppingForm .container .grandTotalGrand {
@@ -779,6 +785,328 @@ body {
   padding-bottom: 22px;
   border-bottom: 1px solid #e2e2e2;
   margin-bottom: 17px;
+}
+
+.imgSinglePage {
+  position: relative;
+}
+
+.imgSinglePage img {
+  min-height: 777px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.imgSinglePage .angle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: calc(50% - 47px / 2);
+  width: 47px;
+  height: 47px;
+  color: #fff;
+  background: #d8d8d8;
+  cursor: pointer;
+}
+
+.imgSinglePage .right {
+  right: 0;
+}
+
+.womenCollection {
+  height: 730px;
+  position: relative;
+  top: -86px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.womenCollection .containerWomen {
+  width: 620px;
+  margin: 0 auto;
+}
+
+.womenCollection .containerWomen h3 {
+  text-align: center;
+  padding-top: 70px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f16d7f;
+}
+
+.womenCollection .containerWomen .womenSwitch {
+  padding-left: calc(50% - 74px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 148px;
+  margin-top: 10px;
+}
+
+.womenCollection .containerWomen .womenSwitch div {
+  width: 44px;
+  height: 1px;
+  background-color: #d6d6d6;
+}
+
+.womenCollection .containerWomen .womenSwitch .center {
+  width: 60px;
+  height: 3px;
+  background-color: #d6d6d6;
+  cursor: pointer;
+}
+
+.womenCollection .containerWomen .womenSwitch .center:hover {
+  background-color: #f16d7f;
+}
+
+.womenCollection .containerWomen h2 {
+  padding-top: 16px;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  color: #4d4d4d;
+}
+
+.womenCollection .containerWomen .textWomenCollection {
+  text-align: center;
+  margin-top: 38px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #5e5e5e;
+}
+
+.womenCollection .containerWomen .materialDesigner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.womenCollection .containerWomen .materialDesigner p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b9b9b9;
+}
+
+.womenCollection .containerWomen .materialDesigner p span {
+  color: #2f2f2f;
+}
+
+.womenCollection .containerWomen .price {
+  margin-top: 36px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ef5b70;
+  padding-bottom: 43px;
+  margin-bottom: 63px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.womenCollection .containerWomen form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 537px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.womenCollection .containerWomen form .boxChoose label {
+  color: #2f2f2f;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.womenCollection .containerWomen form .boxChoose select,
+.womenCollection .containerWomen form .boxChoose input {
+  width: 144px;
+  height: 35px;
+  display: block;
+  border: 1px solid #eaeaea;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #bcbcbc;
+  outline: none;
+}
+
+.womenCollection .containerWomen form .boxChoose .selectWrap {
+  position: relative;
+}
+
+.womenCollection .containerWomen form .boxChoose .selectWrap i {
+  color: #bcbcbc;
+  position: absolute;
+  right: 8px;
+  top: 12px;
+  display: block;
+  font-size: 12px;
+}
+
+.womenCollection .containerWomen form .boxChoose .selectWrap .color {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #f16d7f;
+  top: 11px;
+  left: 14px;
+}
+
+.womenCollection .containerWomen form .boxChoose .selectWrap .selectColor {
+  padding-left: 37px;
+}
+
+.womenCollection .containerWomen form .boxChoose input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.womenCollection .containerWomen form button {
+  width: 100%;
+  border: 1px solid #f16d7f;
+  background: #ffffff;
+  margin-top: 28px;
+  padding: 15px;
+  color: #f16d7f;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.womenCollection .containerWomen form button img {
+  margin-right: 15px;
+}
+
+.mayAlso {
+  margin-top: 30px;
+}
+
+.mayAlso h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: #4d4d4d;
+}
+
+.mayAlso .cardBox .card {
+  height: 364px;
+  margin-top: 60px;
+  float: left;
+}
+
+.mayAlso .cardBox .card .selectCard {
+  height: 280px;
+  width: 261px;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: absolute;
+}
+
+.mayAlso .cardBox .card .selectCard button {
+  padding: 15px;
+  border: 1px solid #ffffff;
+  background: none;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.mayAlso .cardBox .card .imgCard {
+  width: 261px;
+  height: 280px;
+  background: #e9e9e9;
+}
+
+.mayAlso .cardBox .card .signatureCard {
+  margin: 15px;
+}
+
+.mayAlso .cardBox .card .signatureCard .textCard {
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6f6e6e;
+}
+
+.mayAlso .cardBox .card .signatureCard .costCard {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #f16d7f;
+}
+
+.mayAlso .cardBox .card:nth-child(n+5) {
+  margin-top: 39px;
+}
+
+.mayAlso .cardBox .card:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+
+.mayAlso .cardBox .card:hover {
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+
+.mayAlso .cardBox .card:hover .selectCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mayAlso .cardBox:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .subscribe {
