@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import "../bootstrap-4.5.3/scss/bootstrap.scss";
 $containerWidth: 1140px;
 $imgSinglePage: 777px;
+$firstColor:  #f16d7f;
+$secondColor: #ef5b70;
 
 body {
     margin: 0;
@@ -12,6 +15,7 @@ body {
 .container {
     width: $containerWidth;
     margin: 0 auto;
+    padding: 0 !important;
 }
 
 .logo {
@@ -241,7 +245,7 @@ body {
         }
     }
     .cardBox{
-        .card {
+        .cardProduct {
             height: 364px;
             margin-top: 60px; 
             float: left;
@@ -284,13 +288,13 @@ body {
                 }
             }
         }
-        .card:nth-child(n+5) {
+        .cardProduct:nth-child(n+5) {
             margin-top: 39px;
         }
-        .card:not(:nth-child(4n)) {
+        .cardProduct:not(:nth-child(4n)) {
             margin-right: 30px;
         }
-        .card:hover {
+        .cardProduct:hover {
             box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
             .selectCard {
                 display: flex;
@@ -799,13 +803,13 @@ body {
         color: #4d4d4d;
     }
     .cardBox{
-        .card {
+        .cardProduct {
             height: 364px;
             margin-top: 60px; 
             float: left;
             .selectCard {
                 height: 280px;
-                width: 261px;
+                width: 260px;
                 background: rgba(0, 0, 0, 0.5);
                 display: none;
                 position: absolute;
@@ -845,13 +849,13 @@ body {
                 }
             }
         }
-        .card:nth-child(n+5) {
+        .cardProduct:nth-child(n+5) {
             margin-top: 39px;
         }
-        .card:not(:nth-child(4n)) {
+        .cardProduct:not(:nth-child(4n)) {
             margin-right: 30px;
         }
-        .card:hover {
+        .cardProduct:hover {
             box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
             .selectCard {
                 display: flex;
@@ -864,6 +868,289 @@ body {
         content: '';
         display: block;
         clear: both;
+    }
+}
+
+.leftNav {
+    margin-top: 60px;
+    .card {
+        border: none;
+        border-radius: 0;
+        margin-bottom: 18px;
+        background-color: #ffffff;
+        .card-header {
+            padding: 0;
+            background-color: #ffffff;
+            border-left: 5px solid $secondColor;
+            .btn {
+                border-radius: 0;
+                border-bottom: 1px solid #ebebeb; 
+                width: 250px;
+                display: flex;
+                justify-content: space-between;
+                color: $secondColor;
+                font-size: 14px;
+                font-weight: 700;
+                .fa-caret-down {
+                    color: #6f6e6e;
+                }
+                .fa-caret-down::active  {
+                    color: $secondColor;
+                }
+            }
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column; 
+            a {
+                text-decoration: none;
+                font-size: 14px; 
+                line-height: 33px;
+                font-weight: 400;
+                color: #6f6e6e;
+            }
+        }
+    }
+    .selectProduct {
+        display: flex;
+        justify-content: space-between;
+        .boxSelectProduct {
+            width: 262px;
+            .headingSelectProduct {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 700;
+                color: #6f6e6e;
+            }
+            .linksTrendingNow {
+                margin-top: 24px;
+                width: 176px;
+                a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    line-height: 26px;
+                    font-weight: 400;
+                    color: #6f6e6e;
+                    span {
+                        padding: 0 8px;
+                    }
+
+                }
+            }
+            .checkboxesSize {
+                margin-top: 24px;
+                display: flex;
+                flex-wrap: wrap;
+                div {
+                    width: 64px;
+                    padding-left: 2px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    color: #6f6e6e;
+                }
+            }
+            .selectPriceRange {
+                margin-top: 24px;
+                width: 262px;
+                height: 14px;
+                background: url(../images/priceRange.svg) no-repeat;
+            }
+            .selectPriceValues {
+                display: flex;
+                justify-content: space-between;
+                color: #6f6e6e;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 26px;
+                margin-top: 17px;
+            }
+        }
+    }
+    .sortProduct {
+        margin-top: 40px;
+        height: 50px;
+        background-color: #f3f3f3;
+        display: flex;
+        align-items: center;
+        div {
+            height: 30px;
+            margin-left: 10px;
+            background-color: #ffffff;
+            border: 1px solid #ebebeb;
+            padding: 0 12px;
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 400;
+            color: #6f6e6e;
+            float: left;
+        }
+        select {
+            height: 30px;
+            border: 1px solid #ebebeb;
+            border-left: none;
+            padding: 0 12px;
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 400;
+            color: #6f6e6e;
+        }
+    }
+    .cardBox{
+        .cardProduct {
+            height: 364px;
+            margin-top: 60px; 
+            float: left;
+            .selectCard {
+                height: 280px;
+                width: 261px;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                position: absolute;
+                button {
+                    padding: 15px;
+                    border: 1px solid #ffffff;
+                    background: none;
+                    color: white;
+                    font-size: 13px;
+                    font-weight: 700;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+            .imgCard {
+                width: 261px;
+                height: 280px;
+            }
+            .signatureCard {
+                margin: 15px;
+                .textCard {
+                    font-size: 13px;
+                    line-height: 1.2;
+                    font-weight: 400;
+                }
+                .costCard {
+                    margin-top: 10px;
+                    font-size: 16px;
+                    line-height: 1.2;
+                    font-weight: 700;
+                    color: #f16d7f;
+                }
+            }
+        }
+        .cardProduct:nth-child(n+4) {
+            margin-top: 39px;
+        }
+        .cardProduct:not(:nth-child(3n)) {
+            margin-right: 30px;
+        }
+        .cardProduct:hover {
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+            .selectCard {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .cardBox:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .pagesProduct {
+        display: flex;
+        justify-content: space-between;
+        .pagesNavigation {
+            display: flex;
+            align-items: center;
+            height: 44px;
+            border: 1px solid #ebebeb;
+            border-radius: 3px;
+            a {
+                padding-left: 16px;
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 300;
+                color: #c4c4c4;
+            }
+            a:hover {
+                color: #ef5b70;
+            }
+            span {
+                padding-left: 16px;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 300;
+                color: #c4c4c4;
+            }
+            i{
+                padding-left: 16px;
+                //font-size: 20px;
+                //font-weight: 400;
+                color: #aaaaaa;
+            }
+            .fa-chevron-right {
+                padding-right: 16px;
+            }
+        }
+        button {
+            width: 150px;
+            height: 44px;
+            background-color: #ffffff;
+            border: 1px solid $secondColor;
+            border-radius: 3px;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 300;
+            color: $secondColor;
+        }
+    }
+}
+
+.benefits {
+    margin-top: 110px;
+    margin-bottom: -100px;
+    height: 341px;
+    background-color: #222224;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .benefit {
+            padding: 150px 30px 110px;
+            box-sizing: border-box;
+            color: #fbfbfb;
+            letter-spacing: 0.025em;
+        }
+        .benefit:first-child {
+             background: url(../images/details1.png) no-repeat 170px 90px;
+        }
+        .benefit:nth-child(2) {
+             background: url(../images/details2.png) no-repeat 170px 90px;
+        }
+        .benefit:last-child {
+             background: url(../images/details3.png) no-repeat 170px 90px;
+        }
+        .headingBenefits {
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: 0.025em;
+            color: #fbfbfb;
+        }
+        .textBenefits {
+            margin-top: 16px;
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            color: #fbfbfb;
+        }
     }
 }
 
@@ -978,9 +1265,9 @@ body {
 }
 
 .footer {
+    padding: 100px 0;
     height: 460px;
     .container {
-        padding: 100px 0;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
