@@ -70,7 +70,6 @@ body {
             }
         }
         input {
-            width: 317px;
             background-color: #ffffff;
             border: none;
             border-top: 1px solid #e6e6e6;
@@ -1154,8 +1153,105 @@ body {
     }
 }
 
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+.checkout {
+    margin-top: 70px;
+    .checkoutDetails {
+        border-bottom: 1px solid #e8e8e8;
+        summary {
+            display: flex;
+            align-items: center;
+            height: 72px;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 700;
+            color: #222222;
+        }
+        .checkoutData {
+            display: flex;
+            justify-content: space-between;
+            .checkUs {
+                padding-left: 36px;
+                font-size: 13px;
+                font-weight: 400;
+                color: #222222;
+                .headingCheckoutData {
+                    margin-top: 32px;
+                }
+                .textCheckoutData, .miniTextCheckoutData {
+                    padding-top: 14px;
+                    font-size: 13px;
+                    font-weight: 400;
+                    color: #b3b2b2;
+                }
+                label {
+                    padding-left: 14px;
+                    margin-top: 12px;
+                }
+                .textCheckoutData {
+                        margin-bottom: 20px;
+                }
+                button {
+                    margin: 36px 0 80px;
+                    width: 180px;
+                    height: 50px;
+                    background-color: #ffffff;
+                    border: 1px solid #eaeaea;
+                }
+            }
+        }
+        .alreadyRegistred {
+            width: 50%;
+            padding-left: 12px;
+            font-size: 13px;
+            font-weight: 400;
+            color: #222222;
+            .headingAlreadyRegistred {
+                margin-top: 32px;
+            }
+            .textAlreadyRegistred {
+                padding-top: 14px;
+                font-size: 13px;
+                font-weight: 400;
+                color: #b3b2b2;
+            }
+            span {
+                color: #ff0d0d;
+            }
+            form {
+                width: 400px;
+                label {
+                    margin-top: 32px;
+                    margin-bottom: 16px;
+                }
+                input {
+                    width: 390px;
+                    height: 45px;
+                    background-color: #ffffff;
+                    border: 1px solid #eaeaea;
+                }
+                button {
+                    margin: 39px 0 80px;
+                    width: 180px;
+                    height: 50px;
+                    background-color: #ffffff;
+                    border: 1px solid #eaeaea;
+                }
+                .Required {
+                    padding-top: 22px;
+                }
+                .Forgot {
+                    padding-left: 32px;
+                }
+            }
+        }
+    }
+}
+
 .subscribe {
-    height: 438px;
     margin-top: 100px;
     background: url(../images/subscribe.jpg) no-repeat center bottom;
     background-size:  cover;
@@ -1346,6 +1442,159 @@ body {
                     color: white;
                     background: #f16d7f;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .container {
+        width: auto;
+        margin: auto;
+    }
+}
+
+@media (max-width: 769px) {
+    .logo {
+        width: auto;
+    }
+    .header {
+        height: 160px;
+        margin: 15px;
+        .headerBrand{ 
+            flex-direction: column;
+            div, form {
+                margin-bottom: 15px;
+            }
+            .headerSearchForm {
+                padding: 11px;
+            }
+            .headerCart {
+                display: none;
+            }
+        }
+    }
+    .topNav {
+        height: auto;
+        margin: 15px;
+        padding: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .checkout {
+        summary {
+            padding-left: 5px;
+        }
+        .checkoutData{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .checkoutDetails {
+            flex-direction: column;
+            .checkoutData, .alreadyRegistred {
+                width: auto;
+            }
+            .alreadyRegistred {
+                margin-top: 30px;
+                form {
+                    width: 400px;
+                }
+            }
+        }
+    } 
+    .subscribe {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            .review {
+                width: auto;
+                padding-top: 30px;
+                margin-bottom: 50px;
+                .reviewRight {
+                    padding-bottom: 0;
+                }
+            }
+            .formSubscribe {
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+            .review, .formSubscribe {
+                width: auto;
+            }
+            .subscribeDivider {
+                display: none;
+            }
+        }
+    }
+    .footer {
+        height: auto;
+        padding-bottom: 0;
+        .container {
+            display: block;
+            .footerBrand {
+                width: auto;
+                padding: 0 5px;
+            }
+            .footerColumn {
+                width: auto;
+                padding: 0 5px;
+                span {
+                    margin-bottom: 10px;
+                }
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: wrap;
+                }
+            }   
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .topNav {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        a:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+    .newArrivals {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .subscribe {
+        .container {
+            width: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .formSubscribe {
+                width: auto;
+                margin-left: 15px;
+                input {
+                    width: 160px;
+                }
+            }
+            .topReviewer, .bottomReviewer {
+                text-align: center;
+            }
+            .reviewsSwitch {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    .copyright{
+        height: auto;
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            .copyrightText {
+               padding: 10px;
             }
         }
     }

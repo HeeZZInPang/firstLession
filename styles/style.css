@@ -10893,7 +10893,6 @@ body {
 }
 
 .header .headerSearchForm input {
-  width: 317px;
   background-color: #ffffff;
   border: none;
   border-top: 1px solid #e6e6e6;
@@ -12291,8 +12290,132 @@ body {
   color: #fbfbfb;
 }
 
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+.checkout {
+  margin-top: 70px;
+}
+
+.checkout .checkoutDetails {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.checkout .checkoutDetails summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 72px;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+}
+
+.checkout .checkoutDetails .checkoutData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkout .checkoutDetails .checkoutData .checkUs {
+  padding-left: 36px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #222222;
+}
+
+.checkout .checkoutDetails .checkoutData .checkUs .headingCheckoutData {
+  margin-top: 32px;
+}
+
+.checkout .checkoutDetails .checkoutData .checkUs .textCheckoutData, .checkout .checkoutDetails .checkoutData .checkUs .miniTextCheckoutData {
+  padding-top: 14px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #b3b2b2;
+}
+
+.checkout .checkoutDetails .checkoutData .checkUs label {
+  padding-left: 14px;
+  margin-top: 12px;
+}
+
+.checkout .checkoutDetails .checkoutData .checkUs .textCheckoutData {
+  margin-bottom: 20px;
+}
+
+.checkout .checkoutDetails .checkoutData .checkUs button {
+  margin: 36px 0 80px;
+  width: 180px;
+  height: 50px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.checkout .checkoutDetails .alreadyRegistred {
+  width: 50%;
+  padding-left: 12px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #222222;
+}
+
+.checkout .checkoutDetails .alreadyRegistred .headingAlreadyRegistred {
+  margin-top: 32px;
+}
+
+.checkout .checkoutDetails .alreadyRegistred .textAlreadyRegistred {
+  padding-top: 14px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #b3b2b2;
+}
+
+.checkout .checkoutDetails .alreadyRegistred span {
+  color: #ff0d0d;
+}
+
+.checkout .checkoutDetails .alreadyRegistred form {
+  width: 400px;
+}
+
+.checkout .checkoutDetails .alreadyRegistred form label {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.checkout .checkoutDetails .alreadyRegistred form input {
+  width: 390px;
+  height: 45px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.checkout .checkoutDetails .alreadyRegistred form button {
+  margin: 39px 0 80px;
+  width: 180px;
+  height: 50px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.checkout .checkoutDetails .alreadyRegistred form .Required {
+  padding-top: 22px;
+}
+
+.checkout .checkoutDetails .alreadyRegistred form .Forgot {
+  padding-left: 32px;
+}
+
 .subscribe {
-  height: 438px;
   margin-top: 100px;
   background: url(../images/subscribe.jpg) no-repeat center bottom;
   background-size: cover;
@@ -12552,5 +12675,196 @@ body {
 .copyright .container .links a i:hover {
   color: white;
   background: #f16d7f;
+}
+
+@media (max-width: 1170px) {
+  .container {
+    width: auto;
+    margin: auto;
+  }
+}
+
+@media (max-width: 769px) {
+  .logo {
+    width: auto;
+  }
+  .header {
+    height: 160px;
+    margin: 15px;
+  }
+  .header .headerBrand {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .headerBrand div, .header .headerBrand form {
+    margin-bottom: 15px;
+  }
+  .header .headerBrand .headerSearchForm {
+    padding: 11px;
+  }
+  .header .headerBrand .headerCart {
+    display: none;
+  }
+  .topNav {
+    height: auto;
+    margin: 15px;
+    padding: 15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .checkout summary {
+    padding-left: 5px;
+  }
+  .checkout .checkoutData {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .checkout .checkoutDetails {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .checkout .checkoutDetails .checkoutData, .checkout .checkoutDetails .alreadyRegistred {
+    width: auto;
+  }
+  .checkout .checkoutDetails .alreadyRegistred {
+    margin-top: 30px;
+  }
+  .checkout .checkoutDetails .alreadyRegistred form {
+    width: 400px;
+  }
+  .subscribe .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .subscribe .container .review {
+    width: auto;
+    padding-top: 30px;
+    margin-bottom: 50px;
+  }
+  .subscribe .container .review .reviewRight {
+    padding-bottom: 0;
+  }
+  .subscribe .container .formSubscribe {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .subscribe .container .review, .subscribe .container .formSubscribe {
+    width: auto;
+  }
+  .subscribe .container .subscribeDivider {
+    display: none;
+  }
+  .footer {
+    height: auto;
+    padding-bottom: 0;
+  }
+  .footer .container {
+    display: block;
+  }
+  .footer .container .footerBrand {
+    width: auto;
+    padding: 0 5px;
+  }
+  .footer .container .footerColumn {
+    width: auto;
+    padding: 0 5px;
+  }
+  .footer .container .footerColumn span {
+    margin-bottom: 10px;
+  }
+  .footer .container .footerColumn ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-weight: wrap;
+  }
+}
+
+@media (max-width: 426px) {
+  .topNav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .topNav a:not(:last-child) {
+    margin-right: 0;
+  }
+  .newArrivals {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .subscribe .container {
+    width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .subscribe .container .formSubscribe {
+    width: auto;
+    margin-left: 15px;
+  }
+  .subscribe .container .formSubscribe input {
+    width: 160px;
+  }
+  .subscribe .container .topReviewer, .subscribe .container .bottomReviewer {
+    text-align: center;
+  }
+  .subscribe .container .reviewsSwitch {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .copyright {
+    height: auto;
+  }
+  .copyright .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .copyright .container .copyrightText {
+    padding: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
